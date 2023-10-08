@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url(./public/fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-regular';
+    src: url(./public/fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --cor0:#3A67FC;
+    --cor1:#355EE6;
+    --cor2:#2B4DBC;
+    --cor3:#1D337D;
+    --cor4:#0E193D;
+
+    --font-destaque: 'Roboto-bold', sans-serif;
+    --font-padrao: 'Roboto-regular', sans-serif;
+}
+
+/*Reseta configurações do documento*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto-regular', sans-serif;
+}
+
+body {
+    height: 1000vh; /*altura de 100% da tela*/
+}
+
+nav.menu-lateral {
+    width: 70px;
+    height: 100%;
+    background-color: var(--cor4);
+    padding: 40px 0px 40px 1%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .2s;
+    overflow: hidden; /*impede que as palavras do menu fiquem pra fora*/
+}
+
+nav.menu-lateral:hover {
+    width: 300px;
+}
+
+nav > div.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+
+div.btn-expandir > i {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;/*Indica que o ícone é clicável */
+}
+
+ul {
+    height: 100%;
+    list-style-type: none; /*Remove o ponto de tópico*/
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.item-menu:hover{
+    background-color: var(--cor0);
+}
+
+ul > li.item-menu a{
+    color: white;
+    text-decoration: none; /*Remove o sublinhado do link*/
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    line-height: 40px;
+}
+
+ul > li.item-menu > a > span.icon > i {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+ul > li.item-menu > a > span.text-link {
+    margin-left: 25px;
+}
+
+
