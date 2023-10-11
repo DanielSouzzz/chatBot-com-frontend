@@ -45,11 +45,11 @@ nav.menu-lateral {
     position: fixed;
     top: 0;
     left: 0;
-    transition: .2s;
+    transition: .5s;
     overflow: hidden; /*impede que as palavras do menu fiquem pra fora*/
 }
 
-nav.menu-lateral:hover {
+nav.menu-lateral.expandir {
     width: 300px;
 }
 
@@ -73,6 +73,10 @@ ul li.item-menu{
     transition: .2s;
 }
 
+ul li.ativo{
+    background-color: var(--cor0);
+}
+
 ul li.item-menu:hover{
     background-color: var(--cor0);
 }
@@ -84,6 +88,7 @@ ul > li.item-menu a{
     padding: 20px 4%;
     display: flex;
     line-height: 40px;
+    margin-bottom: 10px; /*espaçamento entre a seleção*/
 }
 
 ul > li.item-menu > a > span.icon > i {
@@ -92,7 +97,13 @@ ul > li.item-menu > a > span.icon > i {
 }
 
 ul > li.item-menu > a > span.text-link {
-    margin-left: 25px;
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
 }
 
+nav.menu-lateral.expandir .text-link {
+    margin-left: 40px;
+    opacity: 1;
+}
 
